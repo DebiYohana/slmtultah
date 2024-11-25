@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Teh Mpit!</title>
+    <!-- Link ke Google Fonts dan Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4e1c1; /* Latar belakang krem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* Cegah scroll horizontal */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            padding-bottom: 30px; /* Pastikan ada ruang di bawah */
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 40px 20px;
+            color: #fff;
+            font-size: 3.5rem;
+            font-family: 'Dancing Script', cursive;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header i {
+            font-size: 3rem;
+            animation: bounce 1.5s infinite;
+        }
+
+        .header:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 5px;
+            background-color: #fff;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Message Section */
+        .message {
+            padding: 40px 30px;
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+
+        .message p {
+            margin: 20px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ff416c;
+        }
+
+        /* Image Section */
+        .image-container {
+            width: 100%;
+            max-height: 800px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+            transition: transform 0.5s ease;
+            display: block;
+            border-radius: 15px; /* Menambahkan rounded corner pada gambar */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Agar gambar tetap proporsional */
+            object-position: center; /* Memastikan gambar tetap fokus di tengah */
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Footer Section */
+        .footer {
+            background: #ff416c;
+            padding: 20px;
+            color: #fff;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .footer span {
+            color: #fff;
+            background: #ffeb3b;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        /* Button Section */
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: #ff416c;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background: #feb47b;
+            transform: translateY(-3px);
+        }
+
+        /* Animasi untuk Header */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animasi untuk Footer */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animasi Bounce untuk Ikon di Header */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Animasi pada tombol */
+        .button {
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .header {
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        .footer {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-cat"></i> Selamat Ulang Tahun Teh Mpit! <i class="fas fa-cat"></i>
+        </div>
+
+        <div class="message">
+            <p>Selamat ulang tahun yang ke-<span class="highlight">31</span>! Semoga hari-harimu penuh dengan kebahagiaan, cinta, dan berkah yang melimpah. 💖</p>
+            <p>Semoga semua impianmu tercapai dan selalu diberi kesehatan serta kesuksesan. Nikmati setiap detik perjalanan hidupmu dan tetap semangat! 🎂🎈</p>
+            <p>semoga teh mpit suka dengan website buatan mbi seorang keponakanmu yang paling cantik jelita 🎂🎈</p>
+
+        </div>
+
+        <div class="image-container">
+            <!-- Ganti URL gambar dengan gambar ucapan ulang tahun atau foto pribadi -->
+            <img src="mpit.jpeg" alt="Ucapan Ulang Tahun">
+        </div>
+
+        <div class="footer">
+            <p>Semoga tahun ini menjadi tahun terbaikmu! ✨</p>
+            <p><span>Happy Birthday!</span></p>
+        </div>
+
+        <a href="#" class="button">
+            <i class="fas fa-gift"></i> Buka Hadiah 🎁
+        </a>
+    </div>
+
+</body>
+</html>
